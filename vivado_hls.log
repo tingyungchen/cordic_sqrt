@@ -1,0 +1,81 @@
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'user' on host 'tyc' (Windows NT_amd64 version 6.2) on Wed Dec 23 21:22:57 +0800 2020
+INFO: [HLS 200-10] In directory 'C:/Xilinx/Vivado/2019.2/CORDIC_SQRT'
+Sourcing Tcl script 'C:/Xilinx/Vivado/2019.2/CORDIC_SQRT/hls_isqrt_prj/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project 'C:/Xilinx/Vivado/2019.2/CORDIC_SQRT/hls_isqrt_prj'.
+INFO: [HLS 200-10] Adding design file 'cordic_sqrt.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'float_sqrt.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'top_magnitude.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'test_main.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Xilinx/Vivado/2019.2/CORDIC_SQRT/hls_isqrt_prj/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'top_magnitude.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'float_sqrt.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'cordic_sqrt.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 184.430 ; gain = 92.805
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:23 . Memory (MB): peak = 184.430 ; gain = 92.805
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 184.430 ; gain = 92.805
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'cordic_sqrt<24, 18>' into 'process_magnitude_cordic' (cordic_sqrt.cpp:115) automatically.
+INFO: [XFORM 203-602] Inlining function 'func_process_magnitude' into 'top_process_magnitude' (top_magnitude.cpp:174) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 184.430 ; gain = 92.805
+INFO: [XFORM 203-602] Inlining function 'cordic_sqrt<24, 18>' into 'process_magnitude_cordic' (cordic_sqrt.cpp:115) automatically.
+INFO: [XFORM 203-602] Inlining function 'func_process_magnitude' into 'top_process_magnitude' (top_magnitude.cpp:174) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cordic_sqrt.cpp:81:4) to (cordic_sqrt.cpp:80:15) in function 'process_magnitude_cordic'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cordic_sqrt.cpp:99:2) to (cordic_sqrt.cpp:118:1) in function 'process_magnitude_cordic'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 184.430 ; gain = 92.805
+WARNING: [XFORM 203-631] Renaming function 'process_magnitude_cordic' to 'process_magnitude_co' (cordic_sqrt.cpp:77:15)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 184.430 ; gain = 92.805
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'top_process_magnitude' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'process_magnitude_co' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 24.133 seconds; current allocated memory: 132.577 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.046 seconds; current allocated memory: 132.748 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'top_process_magnitude' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.062 seconds; current allocated memory: 132.917 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 1 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.048 seconds; current allocated memory: 133.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'process_magnitude_co' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'top_process_magnitude_mul_24s_16ns_40_6_1' to 'top_process_magnibkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_process_magnibkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'process_magnitude_co'.
+INFO: [HLS 200-111]  Elapsed time: 0.063 seconds; current allocated memory: 133.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'top_process_magnitude' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_process_magnitude/real_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_process_magnitude/imag_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'top_process_magnitude/magn_data' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'top_process_magnitude' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'top_process_magnitude'.
+INFO: [HLS 200-111]  Elapsed time: 0.242 seconds; current allocated memory: 133.798 MB.
+INFO: [RTMG 210-282] Generating pipelined core: 'top_process_magnibkb_Mul6S_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:25 . Memory (MB): peak = 208.930 ; gain = 117.305
+INFO: [VHDL 208-304] Generating VHDL RTL for top_process_magnitude.
+INFO: [VLOG 209-307] Generating Verilog RTL for top_process_magnitude.
+INFO: [HLS 200-112] Total elapsed time: 25.294 seconds; peak allocated memory: 133.798 MB.
